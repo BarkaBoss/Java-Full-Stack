@@ -2,6 +2,11 @@ package oop;
 
 public class Geometry extends Maths{
 
+    void accessingPi(){
+        System.out.println(getPi());
+        setPi(34f);
+        System.out.println(getPi());
+    }
     float areaOfSquare(float length){
         return powTwo(length);
     }

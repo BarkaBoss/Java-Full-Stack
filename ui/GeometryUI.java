@@ -1,4 +1,5 @@
 package ui;
+import DatatypesAndVariables.files.FileWriterMain;
 import oop.Geometry;
 
 import javax.swing.*;
@@ -44,11 +45,14 @@ public class GeometryUI {
 
         myRectFrame.setVisible(true);
         Geometry geometry = new Geometry();
+        FileWriterMain fileWriterMain = new FileWriterMain();
 
         calcCircumference.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                geometry.areaOfSquare(Float.parseFloat(radius.getText()));
+                float area = geometry.areaOfSquare(Float.parseFloat(radius.getText()));
+                fileWriterMain.writeData("Area Of Square with length: "
+                        +radius.getText()+" is "+ area);
             }
         });
     }

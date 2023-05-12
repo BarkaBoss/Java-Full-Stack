@@ -1,5 +1,7 @@
 package oop;
 
+import ui.GeometryUI;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -7,6 +9,8 @@ public class OOPMain {
     public static void main(String[] args) {
         Geometry geometry = new Geometry();
         geometry.accessingPi();
+        GeometryUI ui = new GeometryUI();
+        ui.drawUI();
 
         Scanner input = new Scanner(System.in);
         try{

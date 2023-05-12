@@ -7,7 +7,7 @@ public class Geometry extends Maths{
         setPi(34f);
         System.out.println(getPi());
     }
-    float areaOfSquare(float length){
+    public float areaOfSquare(float length){
         return powTwo(length);
     }
 

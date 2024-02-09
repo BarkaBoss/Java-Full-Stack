@@ -17,4 +17,9 @@ public class PrimeNumberTest {
     public void testPrimeNumberRangeCount(){
         Assert.assertEquals(8, pm.primeRange(10, 40));
     }
+
+    @Test
+    public void testPrimeNumberRangeCountStartFromZero(){
+        Assert.assertEquals(12, pm.primeRange(0, 40));
+    }
 }

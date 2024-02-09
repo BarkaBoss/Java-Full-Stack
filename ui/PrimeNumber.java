@@ -2,12 +2,14 @@ package ui;
 
 public class PrimeNumber {
 
-    void primeRange(int start, int end){
+    int count = 0;
+    int primeRange(int start, int end){
         int flag;
 
         for (int i = start; i <= end; i++) {
-            if (i == 1 || i == 0)
+            if (i == 1 || i == 0) {
                 continue;
+            }
             flag = 1;
 
             for (int j = 2; j <= i / 2; ++j) {
@@ -16,8 +18,16 @@ public class PrimeNumber {
                     break;
                 }
             }
-            if (flag == 1)
+            if (flag == 1) {
+                count++;
                 System.out.println(i);
+            }
         }
+        return count;
+    }
+
+    public static void main(String[] args) {
+        PrimeNumber pm = new PrimeNumber();
+        pm.primeRange(10, 50);
     }
 }

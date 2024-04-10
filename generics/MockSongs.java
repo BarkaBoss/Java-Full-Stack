@@ -11,4 +11,12 @@ public class MockSongs {
         songs.add("DNA");
         return songs;
     }
+
+    public static List<Song> getSongsList(){
+        List<Song> songs = new ArrayList<>();
+        songs.add(new Song("King Kunta", "Kendrick Lamar", 232));
+        songs.add(new Song("Humble", "Kendrick Lamar", 262));
+        songs.add(new Song("DNA", "Kendrick Lamar", 192));
+        return songs;
+    }
 }

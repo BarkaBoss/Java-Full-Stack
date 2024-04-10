@@ -12,6 +12,10 @@ public class Jukebox2 {
         List<Song> songList = MockSongs.getSongsList();
         System.out.println(songList);
         Collections.sort(songList);
-        System.out.println(songList);
+        System.out.println("Comparable: "+songList);
+
+        ArtistCompare artistCompare = new ArtistCompare();
+        songList.sort(artistCompare);
+        System.out.println("Comparator: "+songList);
     }
 }

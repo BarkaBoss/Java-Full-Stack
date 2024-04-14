@@ -1,6 +1,7 @@
 package generics;
 
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Jukebox2 {
@@ -13,6 +14,16 @@ public class Jukebox2 {
         System.out.println(songList);
         Collections.sort(songList);
         System.out.println("Comparable: "+songList);
+
+        songList.sort(new Comparator<Song>() {
+            @Override
+            public int compare(Song one, Song two) {
+                return one.getArtist().compareTo(two.getArtist());
+            }
+        });
+
+        // Using Lambdas
+        songList.sort((one, two)-> one.getTitle().compareTo(two.getTitle()));
 
         ArtistCompare artistCompare = new ArtistCompare();
         songList.sort(artistCompare);

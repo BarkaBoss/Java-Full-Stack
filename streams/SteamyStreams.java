@@ -3,6 +3,7 @@ package streams;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -11,8 +12,7 @@ public class SteamyStreams {
     public static void main(String[] args) {
         List<String> donutList = List.of("Milk", "Eggs", "Lele", "Flour", "Oil");
         Stream<String> stream = donutList.stream();
-        stream
-                .sorted(String::compareToIgnoreCase)
+        stream.sorted(String::compareToIgnoreCase)
                 .skip(2).toList().forEach(System.out::println);
 
 
@@ -27,10 +27,16 @@ public class SteamyStreams {
         Arrays.stream(arr).distinct().forEach(System.out::println);
         int[] ages = {5, 9, 3, 8, 2, 1};
         Arrays.stream(ages).skip(2).sorted().forEach(System.out::println);
-//        List<String> list = stream.toList();
-//
-//        for(String item : list){
-//            System.out.println(item);
-//        }
+
+
+        String str = "SomeString";
+
+        Runnable helloWorld = () -> System.out.println("Hello World");
+        helloWorld.run();
+        Consumer string = (Str)->{
+            String result = "str = "+Str;
+            System.out.println(result);
+        };
+        string.accept("SomeString");
     }
 }

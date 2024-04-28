@@ -1,5 +1,9 @@
 package ds;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class MyArray {
 
     int[] myArray= new int[5];
@@ -21,6 +25,15 @@ public class MyArray {
 
         MyArray array = new MyArray();
         array.addItem(45);
+
+        List<Integer> number = new ArrayList<>();
+        number.add(45);
+        number.add(15);
+        number.add(25);
+        System.out.println(number);
+
+        List<Integer>numbsSorted = number.stream().sorted().toList();
+        System.out.println(numbsSorted);
     }
 
     void addItem(int number){
@@ -28,4 +41,5 @@ public class MyArray {
         myArray[1] = number;
         myArray[2] = number;
     }
+
 }

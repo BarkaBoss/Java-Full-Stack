@@ -26,5 +26,14 @@ public class StreamSongs {
         for (Song song : songList2){
             System.out.println(song);
         }
+
+        List<String> songList3 = songs.getSongs().stream()
+                .map(Song::getGenre)
+                .distinct()
+                .toList();
+
+        for (String song : songList3){
+            System.out.println(song);
+        }
     }
 }

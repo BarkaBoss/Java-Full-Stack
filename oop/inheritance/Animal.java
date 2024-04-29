@@ -5,4 +5,8 @@ public class Animal {
     float weight;
     String animalType;
     String bloodType;
+
+    public void move(){
+        System.out.println("Moving on 4 legs");
+    }
 }

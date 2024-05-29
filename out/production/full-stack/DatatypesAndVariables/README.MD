@@ -9,4 +9,6 @@ Variables have data types that describe the value they can hold
    3. int: Holds whole numbers **int max = 2147483647; int min = -2147483648;**
    4. long: Holds whole numbers **long longMin = -9223372036854775808L; long longMax = 9223372036854775807L;**
    5. float: Holds fractions
-2. 
+   6. double:
+2. Reference types:
+   1. String
